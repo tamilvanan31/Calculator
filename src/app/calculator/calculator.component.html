@@ -1,0 +1,39 @@
+<h1 mat-dialog-title> Calculator </h1>
+<mat-card fxLayout="row" fxLayout.xs="column">
+  <mat-card-header>
+    <mat-card-title class="display">Amount &nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{input}}</mat-card-title>
+    <mat-card-title class="display">Total &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{result}}</mat-card-title>
+    <mat-card-title class="display">Printer &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OFF</mat-card-title>
+  </mat-card-header>
+  <div mat-dialog-content>
+    <button mat-raised-button (click)="cPressed()" color="warn">C</button>
+    <button mat-raised-button (click)="cePressed()" color="primary">CE</button>
+    <button mat-raised-button (click)="sPressed()" color="primary">S</button>
+    <button mat-raised-button (click)="pPressed()" color="primary">P</button>
+
+    <button mat-raised-button (click)="numberPressed('7')">7</button>
+    <button mat-raised-button (click)="numberPressed('8')">8</button>
+    <button mat-raised-button (click)="numberPressed('9')">9</button>
+    <button mat-raised-button (click)="operatorPressed('/')">/</button>
+
+    <button mat-raised-button (click)="numberPressed('4')">4</button>
+    <button mat-raised-button (click)="numberPressed('5')">5</button>
+    <button mat-raised-button (click)="numberPressed('6')">6</button>
+    <button mat-raised-button (click)="operatorPressed('*')">*</button>
+
+    <button mat-raised-button (click)="numberPressed('1')">1</button>
+    <button mat-raised-button (click)="numberPressed('2')">2</button>
+    <button mat-raised-button (click)="numberPressed('3')">3</button>
+    <button mat-raised-button (click)="operatorPressed('-')">-</button>
+
+    <button mat-raised-button (click)="numberPressed('0')" style="width: 45%">0</button>
+    <button mat-raised-button (click)="numberPressed('.')">.</button>
+    <button mat-raised-button (click)="operatorPressed('+')">+</button>
+    <br>
+    <br>
+  </div>
+</mat-card>
+<div mat-dialog-actions [align]="'center'">
+  <button mat-raised-button color="primary">Accept F12</button>
+  <button mat-raised-button color="warn" mat-dialog-close>Cancel Esc</button>
+</div>
